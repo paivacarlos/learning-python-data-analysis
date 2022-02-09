@@ -13,3 +13,16 @@ myFile = open("files/file-01.txt", "a")
 myFile.write(" Acrescentando conteudo no arquivo")
 myFile = open("files/file-01.txt", "r")
 print(myFile.read())
+
+#Criando arquivos
+fileName = input("Dig o nome do arquivo: ")
+fileName = fileName + ".txt"
+
+myFileCreated = open(fileName, "w")
+text = input("Digite o texto: ")
+myFileCreated.write(text)
+myFileCreated.close()
+
+myFileCreatedToRead = open(fileName, "r")
+print(myFileCreatedToRead.read())
+myFileCreatedToRead.close()
