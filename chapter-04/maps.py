@@ -16,7 +16,7 @@ print(list(map(fahrenheit, temperatures)))
 for temp in map(fahrenheit, temperatures):
     print(temp)
 
-#somando os elemntos de tres listas
+#somando os elementos de tres listas
 l1 = [1, 2, 3, 4]
 l2 = [5, 6, 7, 8]
 l3 = [9, 10, 11, 12]
