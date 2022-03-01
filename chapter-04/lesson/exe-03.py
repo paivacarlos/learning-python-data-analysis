@@ -11,11 +11,11 @@ secondColumn = list(map(lambda j:j[1], matrix))
 columns = [firstColumn, secondColumn]
 counter = 0
 listsAux = []
-listResult = []
+listTranspose = []
 for i in range(0, len(matrix)):
     listsAux = list(map(lambda line: line[counter], columns))
-    listResult.append(listsAux)
+    listTranspose.append(listsAux)
     counter += 1
 
-for i in listResult:
+for i in listTranspose:
     print(i)
