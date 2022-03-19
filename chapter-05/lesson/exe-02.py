@@ -19,3 +19,7 @@ people01 = People("Carlos Paiva", "São Lepoldo", "51-997064415", "paivakk22@gma
 print(people01)
 print(getattr(people01, "name"))
 print(hash(people01))
+
+people02 = People("Adolfo Paiva", "Porto Alegre", "51-34281836", "adolfo10@gol.com.br")
+print(people02)
+print(hash(people02))
