@@ -2,6 +2,7 @@ import sqlite3
 import random
 import time
 import datetime
+import matplotlib.pyplot as plot
 
 #criando a conexão
 connectDb = sqlite3.connect('db/dsa.db')
@@ -67,11 +68,21 @@ def remove_data():
     c.execute("DELETE FROM products WHERE value = 55.0")
     connectDb.commit()
 
-update_data()
-#read_all_data()
+#gerar grafico com so dados do banco criado até então
+def graphic_data():
+    c.execute("SELECT id, value FROM products")
+    ids = []
+    values = []
+    datas = c.fetchall()
+    for line in datas:
+        ids.append(line[0])
+        values.append(line[1])
 
-remove_data()
-read_all_data()
+    plot.bar(ids, values)
+    plot.show()
+
+#gerando os graficos
+graphic_data()
 
 #fechando a conexão com o banco de dados
 c.close()
